@@ -1,0 +1,25 @@
+{
+    "name": "tohyo/php-simple-payment-capture",
+    "description": "Little package to simply capture card payment from multiple payment provider",
+    "version": "0.0.1",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kévin Baujard",
+            "homepage": "https://github.com/"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "stripe/stripe-php": "^7.75",
+        "braintree/braintree_php": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "SimplePaymentCapture\\" : "src/"
+        }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.81"
+    }
+}
