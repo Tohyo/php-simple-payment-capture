@@ -31,7 +31,7 @@ class PaymentClient
         return (PaymentProviderFactory::create($paymentDto->getProviderName()))
             ->validateConfiguration(
                 PaymentProviderValidatorFactory::create($paymentDto->getProviderName()),
-                $this->config[$paymentDto->getProviderName()]
+                $this->config[$paymentDto->getProviderName()] ?? []
             )
             ->capture($paymentDto);
     }

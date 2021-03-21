@@ -30,4 +30,7 @@ jobs:
       run: composer install --prefer-dist --no-progress --no-suggest
 
     - name: Phpstan
-      run: composer run-script phpstan    
+      run: composer run-script phpstan
+      
+    - name: Unit test
+      run: composer run-script unit-test

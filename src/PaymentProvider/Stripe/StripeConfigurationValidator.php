@@ -15,7 +15,7 @@ class StripeConfigurationValidator implements PaymentProviderConfigurationValida
      */
     public function validate(array $config): void
     {
-        if (!$config['private_key']) {
+        if (!isset($config['private_key'])) {
             throw new InvalidProviderConfiguration(
                 sprintf('Wrong configuration for provider: %s', PaymentProviderEnum::STRIPE)
             );
