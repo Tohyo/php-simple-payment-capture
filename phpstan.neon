@@ -1,0 +1,11 @@
+parameters:
+    level: max
+    paths:
+        - src
+    ignoreErrors:
+        - 
+            message: '#Access to an undefined property [a-zA-Z0-9\\_]+::\$transaction#'
+            path: 'src/PaymentProvider/Braintree/Braintree'
+        - '#PHPDoc tag @throws with type [a-zA-Z0-9\\_]+ProviderNotFoundException is not subtype of Throwable#'
+        - '#PHPDoc tag @throws with type [a-zA-Z0-9\\_]+InvalidProviderConfiguration is not subtype of Throwable#'
+        - '#PHPDoc tag @throws with type SimplePaymentCapture\\InvalidProviderConfiguration|SimplePaymentCapture\\ProviderNotFoundException is not subtype of Throwable#'

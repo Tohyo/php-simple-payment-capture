@@ -4,6 +4,7 @@ namespace SimplePaymentCapture\PaymentProvider\Braintree;
 
 use SimplePaymentCapture\Dto\PaymentDto;
 use Braintree\Gateway;
+use Braintree\Result\Successful;
 use SimplePaymentCapture\Dto\PaymentResponseDto;
 use SimplePaymentCapture\Enum\PaymentProviderEnum;
 use SimplePaymentCapture\PaymentProvider\AbstractPaymentProvider;
@@ -14,6 +15,7 @@ class Braintree extends AbstractPaymentProvider
     {
         $braintree = new Gateway($this->config);
 
+        /** @var Successful */
         $braintreeResponse = $braintree->transaction()->sale([
             'amount' => $paymentDto->getAmount(),
             'creditCard' => [
