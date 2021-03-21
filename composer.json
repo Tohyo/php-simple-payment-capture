@@ -1,7 +1,6 @@
 {
     "name": "tohyo/php-simple-payment-capture",
     "description": "Little package to simply capture card payment from multiple payment provider",
-    "version": "0.0.1",
     "license": "MIT",
     "authors": [
         {
